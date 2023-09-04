@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const name = 'Sam Doe'
+  const loading = true;
+
+  const foo = () => "Bars"
+
 
   return (
-   <div>
-    <h2>Howdy </h2>
-   </div>
+    <div className="App">
+      <h1>Howdy Sam</h1>
+      <React.Fragment>
+        <span>{name}</span>
+        { foo() }
+      </React.Fragment>
+      {loading ? <h4>Loading Howdy</h4> : null}
+    </div>
   )
 }
 
